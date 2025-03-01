@@ -1,6 +1,9 @@
 # タスク管理アプリケーション リリースTODO
 - TODOリストはPullRequestの単位で分かれていること
 - タスクの完了の定義はPullRequestを作成してCIが通ること
+- 実行したことをtask/にマークダウン形式で保存すること
+- 実行が完了したら `say "タスクが完了しました"` を実行すること
+- わからないことがあれば .cursor及び docsを参照しに行くこと
 
 ## データベース設計・実装
 - [x] Taskモデルの作成（id, title, description, status, due_date, created_at, updated_at）
