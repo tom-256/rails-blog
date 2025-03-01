@@ -32,8 +32,9 @@ class TaskTest < ActiveSupport::TestCase
 
   # status関連のテスト
   test "should not save task without status" do
-    task = Task.new(title: "Test Task", status: nil)
-    assert_not task.save, "ステータスなしでタスクが保存されました"
+    task = Task.new(title: "Test Task")
+    task.status = nil
+    assert_not task.valid?
     assert_includes task.errors[:status], "は必須です"
   end
 
