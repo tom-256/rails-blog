@@ -1,3 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
 # 要求解釈の学習ポイント
 
 ## ソフトウェア実装とタスク依頼の区別
