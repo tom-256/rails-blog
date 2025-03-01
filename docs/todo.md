@@ -1,7 +1,7 @@
 # タスク管理アプリケーション リリースTODO
 
 ## データベース設計・実装
-- [ ] Taskモデルの作成（id, title, description, status, due_date, created_at, updated_at）
+- [x] Taskモデルの作成（id, title, description, status, due_date, created_at, updated_at）
 - [ ] データベースマイグレーションの作成と実行
 - [ ] モデルのバリデーション実装
 - [ ] モデルの単体テスト作成
