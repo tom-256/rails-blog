@@ -1,10 +1,12 @@
 # タスク管理アプリケーション リリースTODO
+- TODOリストはPullRequestの単位で分かれていること
+- タスクの完了の定義はPullRequestを作成してCIが通ること
 
 ## データベース設計・実装
 - [x] Taskモデルの作成（id, title, description, status, due_date, created_at, updated_at）
 - [x] データベースマイグレーションの作成と実行
 - [x] モデルのバリデーション実装
-- [ ] モデルの単体テスト作成
+- [x] モデルの単体テスト作成
 
 ## API実装
 - [ ] タスク一覧取得エンドポイント（GET /api/v1/tasks）の実装
