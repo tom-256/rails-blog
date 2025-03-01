@@ -1,15 +1,15 @@
 class Task < ApplicationRecord
   # タイトルは必須
-  validates :title, presence: { message: "は必須です" }, 
+  validates :title, presence: { message: "は必須です" },
                     length: { maximum: 100, message: "は100文字以内で入力してください" }
 
   # 説明文は1000文字まで
-  validates :description, length: { maximum: 1000, message: "は1000文字以内で入力してください" }, 
+  validates :description, length: { maximum: 1000, message: "は1000文字以内で入力してください" },
                           allow_blank: true
 
   # ステータスは必須かつ、指定された値のいずれかであること
-  validates :status, presence: { message: "は必須です" }, 
-                     inclusion: { in: [ "todo", "in_progress", "done" ], 
+  validates :status, presence: { message: "は必須です" },
+                     inclusion: { in: ["todo", "in_progress", "done"],
                                   message: "は 'todo', 'in_progress', 'done' のいずれかである必要があります" }
 
   # 期限日は未来の日付または空欄であること（過去の日付は不可）
