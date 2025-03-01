@@ -32,7 +32,7 @@ globs:
 
   # PRの作成
   git push origin HEAD && \
-  gh pr create --draft --title "{{PRタイトル}}" --body-file tmp/pr_body.txt && \
+  gh pr create --draft --title "{{PRタイトル}}" --auto-merge --body-file tmp/pr_body.txt && \
   gh pr view --web
 ```
 
