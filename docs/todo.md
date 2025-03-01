@@ -3,7 +3,7 @@
 ## データベース設計・実装
 - [x] Taskモデルの作成（id, title, description, status, due_date, created_at, updated_at）
 - [x] データベースマイグレーションの作成と実行
-- [ ] モデルのバリデーション実装
+- [x] モデルのバリデーション実装
 - [ ] モデルの単体テスト作成
 
 ## API実装
