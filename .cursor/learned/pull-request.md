@@ -20,22 +20,17 @@ globs:
 - PR タイトルおよび PR テンプレートはマージ先との差分をもとに適切な内容にする
 - 指示がない限り Draft で pull request を作成
 - PR の本文は一時ファイルを使用して作成することを推奨
-- 一時ファイルは作成後削除する(削除時は確認しなくて良い)
+- `{{PRテンプレートを1行に変換}}`の部分はPRテンプレートの内容を`\n`で改行表現した1行の文字列
 - 各セクションを明確に区分
 - 必要な情報を漏れなく記載
 
 ```bash
-  # PR本文を一時ファイルに保存
-  cat > tmp/pr_body.txt << 'EOL'
-  {{PRテンプレートの内容}}
-  EOL
-
   # PRの作成
   git push origin HEAD && \
-  gh pr create --draft --title "{{PRタイトル}}" --auto-merge --body-file tmp/pr_body.txt && \
+  echo -e "{{PRテンプレートを1行に変換}}" | \
+  gh pr create --draft --title "{{PRタイトル}}" --body-file - && \
   gh pr view --web
 ```
 
-
 #### PRテンプレート
-.github/PULL_REQUEST_TEMPLATE.md からテンプレート内容を取得すること 
+@PULL_REQUEST_TEMPLATE.md からテンプレート内容を取得すること 
